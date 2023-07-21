@@ -1,0 +1,37 @@
+.filtersContainer {
+    background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;     
+}
+
+.selectBox {
+    width: max-content;
+}
+
+.selectBox select {
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    border: 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.13);
+    font-size: 1.8rem;
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    appearance: none;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.selectBox select:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .filtersContainer {
+        flex-direction: row;
+    }
+}
+
+

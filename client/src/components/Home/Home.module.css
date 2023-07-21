@@ -1,0 +1,44 @@
+.container {
+    max-width: 1500px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 2px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-cute-dog-tiled-background-blue-bones-picture-image_1349649.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.8);
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+
+.filters {
+    margin-top: 110px;
+} 
+
+/* .pagination {
+
+} */
+
+/* .cards {
+
+} */

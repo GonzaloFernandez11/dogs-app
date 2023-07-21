@@ -1,0 +1,68 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    max-width: 1500px;
+    z-index: 1;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+    background: #0F2027;  
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+}
+
+
+.icon img {
+    width: 75px;
+    height: 75px;
+}
+
+.create {
+    margin-left: 70px;
+}
+
+.logOut {
+    margin-left: 70px;
+}
+
+.botonboton {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 525;
+    background: transparent;
+    border: solid #ffffffbe;
+    color: #ffffffbe;
+    text-shadow: none;
+    box-shadow: transparent;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.botonboton:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 
+    0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 20px #ffffff;
+    box-shadow:  
+    0 0 5px #008cff,
+    0 0 20px #008cff,
+    0 0 50px #008cff,
+    0 0 100px #008cff;
+}
+
+
+.searchbar {
+    margin-left: 70px;
+    flex: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}

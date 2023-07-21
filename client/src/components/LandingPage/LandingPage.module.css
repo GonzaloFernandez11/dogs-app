@@ -1,0 +1,62 @@
+.container {
+  position: relative;
+  max-width: 1500px;
+  margin: auto;
+  padding: 2px;
+  height: 100vh;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(https://wallpapers.com/images/featured/dog-wj7msvc5kj9v6cyy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+
+.welcomeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+}
+
+.LandingInfo {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.customLink {
+  text-decoration: none;
+  color: inherit; 
+}
+
+ .welcome {
+  margin: 0;
+  font-family: 'Roboto Condensed', cursive;
+  transition: font-size 0.3s, color 0.3s, text-shadow 0.3s;
+  color: aliceblue;
+  
+}
+
+ .welcome:hover {
+  font-family: 'Alfa slab one', 'Roboto Condensed';
+  cursor: pointer;
+  font-size: 3em;
+  color: #0084ff;
+  text-shadow:
+  0 0 20px #FFFFFF,
+  0 0 20px #FFFFFF,
+  0 0 20px #FFFFFF;
+}

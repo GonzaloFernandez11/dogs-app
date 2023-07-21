@@ -1,0 +1,66 @@
+.buttonPage {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 525;
+    background: transparent;
+    border: solid #ffffffbe;
+    color: #ffffffbe;
+    box-shadow: transparent;
+    transition: 0.1s ease;
+}
+
+.buttonPage:hover {
+    background-color: rgb(113, 255, 47);
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+    color: black;
+    transform: scale(1.1);
+    box-shadow:  
+    0 0 5px rgb(113, 255, 47),
+    0 0 20px rgb(113, 255, 47),
+    0 0 50px rgb(113, 255, 47),
+    0 0 100px rgb(113, 255, 47);
+}
+
+.botoncito {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 525;
+    background: transparent;
+    border: solid #ffffffbe;
+    color: #ffffffbe;
+    box-shadow: transparent;
+    transition: 0.1s ease;
+}
+
+.botoncito:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    transform: scale(1.2);
+    box-shadow:  
+    0 0 5px #008cff,
+    0 0 20px #008cff,
+    0 0 20px #008cff,
+    0 0 100px #008cff;
+}
+
+
+/*
+.botonboton {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 525;
+    background: transparent;
+    border: solid #ffffffbe;
+    color: #ffffffbe;
+    text-shadow: none;
+    box-shadow: transparent;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+*/
