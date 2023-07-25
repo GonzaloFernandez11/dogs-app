@@ -13,6 +13,7 @@ export default function Card({ id, image, name, temperaments, weight }) {
                     <div className={styles.nameContainer}> {/* Container para el name */}
                         <h2 className={styles.cardName}>{name}</h2>
                     </div>
+
                 </div>
 
                 <div className={styles.content}>

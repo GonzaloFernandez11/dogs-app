@@ -19,18 +19,18 @@ module.exports = (sequelize) => {
       allowNull: false,
       defaultValue: 'https://wallpaperaccess.com/full/3023222.jpg',
     },
-    height: {  // Ver la API, puede ser DataTypes.ARRAY(DataTypes.STRING)
+    height: {  
       type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false,
     },
-    weight: { // Ver la API, puede ser DataTypes.ARRAY(DataTypes.STRING)
+    weight: { 
       type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false,
     },
     life_span: {
       type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false,
-    }
+    },
   }, {
     timestamps: false,
   });

@@ -1,5 +1,5 @@
 const { Breeds, Temperaments } = require('../db.js');
-const axios = require('axios'); // instalar Axios.
+const axios = require('axios'); 
 require('dotenv').config();
 const { API_KEY } = process.env;
 
@@ -27,15 +27,15 @@ const getApiBreeds = async () => {
 }
 
 const getBreedsFromDB = async () => {
-    const infoDB = await Breeds.findAll({
-        include: {
-            model: Temperaments,
+    const infoDB = await Breeds.findAll({  // Buscamos todas las breeds de la tabla Breeds.
+        include: {  // Incluímos los datos relacionados de la tabla Temperaments. ( a través de la relación definida ).
+            model: Temperaments,  
             attributes: ['name'],
             through: {
                 attributes: [],
             },
         },
-    });
+    });  // Creo que tengo una lista de objetos, cada obj es un registro de la tabla 'breeds' con info relacionada de la tabla 'temperaments'
     
     const breedsDB = infoDB.map( ele => {
         return {
@@ -45,7 +45,7 @@ const getBreedsFromDB = async () => {
             height: ele.height,
             weight: ele.weight,
             life_span: ele.life_span,
-            temperaments: ele.temperaments.map( temp => temp.name ) // asi no me trae el objeto, sino los nombres.
+            temperaments: ele.temperaments.map( temp => temp.name ), // asi no me trae el objeto, sino los nombres.
         }
     } );
 
@@ -88,23 +88,31 @@ const getBreedsByID = async (id) => {
 
 const postNewDog = async (name, image, min_height, max_height, min_weight, max_weight, min_life, max_life, temperaments) => {
 
+
     if(!name || !image || !min_height || !max_height || !min_weight || !max_weight || !min_life || !max_life || temperaments.length === 0) {
         throw new Error(`Missing Data`)
     } else if (
-        
+        // VERIFICAR NAME
     !/^[A-Za-z ]+$/.test(name) 
+
+    // VERIFICAR MIN_HEIGHT
     || min_height < 15 
     || !/^[0-9]+$/.test(min_height)
 
+    // VERIFICAR MAX_HEIGHT
     || max_height > 110 
     || !/^[0-9]+$/.test(max_height)
-
     || min_height > max_height 
+
+    // VERIFICAR MIN_WEIGHT
     || min_weight < 1 || !/^[0-9]+$/.test(min_weight) 
 
+    // VERIFICAR MAX_WEIGHT
     || max_weight > 90 
     || !/^[0-9]+$/.test(max_weight) 
     || min_weight > max_weight || min_life < 1 
+
+    // VERIFICAR MIN_LIFE | MAX_LIFE
     || !/^[0-9]+$/.test(min_life) 
     || max_life > 20 || !/^[0-9]+$/.test(max_life) 
     || min_life > max_life
@@ -145,22 +153,9 @@ const postNewDog = async (name, image, min_height, max_height, min_weight, max_w
 }
 
 
-const test = async (name) => {
-    const allBreeds = await getAllBreeds();
-
-    if(name) {
-        const filtered = allBreeds.filter(ele => ele.name.toUpperCase().includes( name.toUpperCase() ));
-        if(!filtered.length) {
-            throw new Error('no nombre');
-        } else {
-            return filtered;
-        }
-    }
-}
 
 module.exports = {
     getAllBreeds,
     getBreedsByID,
     postNewDog,
-    test,
 }

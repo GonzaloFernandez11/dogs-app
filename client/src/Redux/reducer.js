@@ -10,10 +10,6 @@ import {
  } from './actionTypes.js';
 
 
- // Fallas a resolver: 
- // Temperaments en el form.
-
-
 const initialState = {
     breeds: [],
     breedsGlobal: [],
@@ -31,7 +27,7 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 breeds: action.payload,
-                breedsGlobal: action.payload,
+                breedsGlobal: action.payload,  // copia de datos para los reseteos :)
             };
         case GET_ALL_TEMPERAMENTS:
             return {
@@ -41,7 +37,7 @@ const rootReducer = (state = initialState, action) => {
         case RESET_FILTERS:
             return {
                 ...state,
-                breeds: state.breedsGlobal,
+                breeds: state.breedsGlobal,  // para que no se me pierdan las breeds después de filtrar
                 sorts_filters: [],
             };
         case SEARCH_BY_NAME:
@@ -94,7 +90,7 @@ const rootReducer = (state = initialState, action) => {
                 filteredData.sort((a, b) => {   // Del string matche los num con la regexp y los transformo en valores numéricos con el map.
 
                     const aWeightNumbers = a.weight === 'NaN' ? [0] : Array.isArray(a.weight) ? 
-                    a.weight.join('').match(/\d+/g).map(Number) : a.weight.match(/\d+/g).map(Number);
+                    a.weight.join('').match(/\d+/g).map(Number) : a.weight.match(/\d+/g).map(Number);  // array de strings a array de num.
 
                     const bWeightNumbers = b.weight === 'NaN' ? [0] : Array.isArray(b.weight) ? 
                     b.weight.join('').match(/\d+/g).map(Number) : b.weight.match(/\d+/g).map(Number);

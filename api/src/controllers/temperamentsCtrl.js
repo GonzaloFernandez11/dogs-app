@@ -20,8 +20,8 @@ const getTemperaments = async () => {
         if( ele.temperament  ) {
             temperaments = ele.temperament.split(', ');
 
-            aux = allTemperaments;
-            aux = [...aux, ...temperaments];
+            aux = allTemperaments;  // Para que no se pierdan los que viejos y puedan ser combinados con los nuevos de ele.temperaments
+            aux = [...aux, ...temperaments];  // Combinamos los temperamentos
             aux = new Set( aux );    // Evitamos Repeticiones;
             allTemperaments = [...aux]
         }
@@ -33,7 +33,7 @@ const getTemperaments = async () => {
     for( let temp of aux ) {  
         tempsObj.push({ name: temp });
     }
-    aux = []; 
+    aux = [];   // Para que no queden datos acumulados en futuros usos
 
     const verification = await Temperaments.findAll();
     if( !verification.length ) {

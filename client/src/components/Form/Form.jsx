@@ -42,13 +42,16 @@ export default function Form() {
         max_life: '.',
     });
 
-    // if( !form.temperaments ) setForm({ ...form, temperaments: [] });
 
 
     function handleInputChange(name, value) {
-        if( isNaN(parseInt(value)) ) setForm({ ...form, [name]: value });  // Si no es un num, se trata de un nombre o una url.
-        else( setForm({ ...form, [name]: parseInt(value) }) ); // Si es un num, entonces lo pasamos a entero y lo guardamos.
-
+        if( isNaN(parseInt(value)) ) {
+            setForm({ ...form, [name]: value });  // Si no es un num, se trata de un nombre o una url.
+          } 
+          else {
+            const parsedValue = value === '' ? null : parseInt(value);
+            ( setForm({ ...form, [name]: parsedValue }) ); // Si es un num, entonces lo pasamos a entero y lo guardamos.
+        }
         setErrors(
             validate({  // Validamos los errores, si hay alguno, se muestran en pantalla
                 ...form,
@@ -57,43 +60,30 @@ export default function Form() {
         )
     };
 
-    // function handleSelectTemp(opt) {  // Seleccionar un temperamento.
-    //     setForm({
-    //         ...form,
-    //         temperaments: form.temperaments.includes(opt) // temperamentos incluye la opcion?
-    //         ? form.temperaments : [...form.temperaments, opt] // si = form.temperaments, no = todo lo que ya existe + la opción elegida
-    //     });
-    // }
 
     function handleSelectTemp(opt) {
-        const isAlreadySelected = selectedTemperaments.includes(opt);
+        const isAlreadySelected = selectedTemperaments.includes(opt);  // Para saber si ya existe en el estado local.
       
         if (!isAlreadySelected) {
-          setSelectedTemperaments([...selectedTemperaments, opt]);
+          setSelectedTemperaments([...selectedTemperaments, opt]);  // si no existe ya, lo sumamos.
         }
       }
 
 
       function handleDeleteTemperament(index) {
-        const updatedTemperaments = [...selectedTemperaments];
-        updatedTemperaments.splice(index, 1);
+        const updatedTemperaments = [...selectedTemperaments];  // para no modificar el estado directamente.
+        updatedTemperaments.splice(index, 1);  // index = posicion a modificar / 1 = cantidad de elementos a modificar desde ese indice.
         setSelectedTemperaments(updatedTemperaments);
       }
 
-    console.log(selectedTemperaments)
+    // console.log(selectedTemperaments)
 
-    // function deleteTemperament(opt) {  // eliminar un temperamento
-    //     setForm({
-    //         ...form,
-    //         temperaments: form.temperaments.filter(value => value !== opt) // eliminamos filtrando, dejamos todo excepto el que no queremos
-    //     });
-    // }
 
 
     function createBreed(e) {  // Si todo está correcto, creamos la nueva breed con la action 'postbreed' y redirigimos al home.
         e.preventDefault();
 
-        const breedData = {
+        const newBreed = {
             name: form.name,
             image: form.image,
             min_height: form.min_height,
@@ -104,7 +94,8 @@ export default function Form() {
             max_life: form.max_life,
             temperaments: selectedTemperaments,
         }
-        dispatch(postBreed(breedData));
+        console.log(newBreed)
+        dispatch(postBreed(newBreed));
         history.push('/home');
     }
 
@@ -193,6 +184,7 @@ export default function Form() {
                 </div>
                 <hr />
 
+                
                 <div className={styles.inputContainer}>
                     <label>Life Span:</label>
                     <div className={styles.flexInput}>

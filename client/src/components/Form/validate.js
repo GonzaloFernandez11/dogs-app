@@ -41,5 +41,11 @@ export default     function validate(input) {
     if( parseInt(input.min_life) > parseInt(input.max_life) )
     errors.min_life = `The minimumlife expectancy cannot exceed the maximum`;
 
+    // Validamos el precio:
+    if (input.precio === '') errors.precio = `The "precio" field can't be empty`;
+    else if (isNaN(input.precio)) errors.precio = 'The precio must be a number greater than 0';
+    else if (parseInt(input.precio) <= 0) errors.precio = 'The precio must be a number greater than 0';
+
+
     return errors;
 }

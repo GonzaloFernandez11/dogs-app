@@ -18,11 +18,11 @@ export default function Filters() {
     const handleClick = (e) => {
         e.preventDefault();
 
-        if( e.target.name === 'tempFilter' ) {
+        if( e.target.name === 'tempFilter' ) {  // Cada vez que haya un cambio se resetea el filter sorts_filters
             setTempFilter(e.target.value);
             dispatch(resetFilters()) // llamo para resetear el filtrado :)
         }
-        if( e.target.name === 'originFilter' ) {
+        if( e.target.name === 'originFilter' ) {  // Cada vez que haya un cambio se resetea el filter sorts_filters
             setOriginFilter(e.target.value);
             dispatch(resetFilters());
         }
@@ -34,7 +34,7 @@ export default function Filters() {
         }
     }
 
-    useEffect(() => {
+    useEffect(() => {  // Cuando se monta el componente o cuando se actualizan estos estados.
         dispatch(sortsAndFilters(temperamentFilter, originFilter, selectAlphOrder, selectWeightOrder));
     }, [dispatch, temperamentFilter, originFilter, selectAlphOrder, selectWeightOrder]);
 

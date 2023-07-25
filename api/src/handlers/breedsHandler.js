@@ -1,4 +1,4 @@
-const { getAllBreeds, getBreedsByID, postNewDog, test } = require('../controllers/breedsCtrl');
+const { getAllBreeds, getBreedsByID, postNewDog } = require('../controllers/breedsCtrl');
 
 // Creación de los Handlers:
 
@@ -40,20 +40,10 @@ const postBreed = async (req, res) => {
     }
 } 
 
-const probar = async (req, res) => {
-    const { name } = req.query;
-    try {
-        const response = await test(name);
-        res.status(200).json(response)
-    } catch (error) {
-        res.status(400).send({ error: error.message });
-    }
-}
 
 
 module.exports = {
     getBreeds,
     getBreedById,
     postBreed,
-    probar,
 }

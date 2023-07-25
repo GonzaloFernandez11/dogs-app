@@ -14,7 +14,7 @@ export default function Details() {
 
     useEffect(() => {
         dispatch( getByID(id) );
-        return () => dispatch(clearBreedDetail()); 
+        return () => dispatch(clearBreedDetail());  // Cuando el componente se desmonte
     }, [dispatch, id]);
 
 
