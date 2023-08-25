@@ -14,12 +14,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-cute-dog-tiled-background-blue-bones-picture-image_1349649.jpg');
+    /* background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-cute-dog-tiled-background-blue-bones-picture-image_1349649.jpg'); */
+    background: #fe8c00; 
+    background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+    background: linear-gradient(to right, #f83600, #fe8c00); 
+     
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     z-index: -1;
-    filter: brightness(0.8);
+    /* filter: brightness(0.8); */
 }
 
 
