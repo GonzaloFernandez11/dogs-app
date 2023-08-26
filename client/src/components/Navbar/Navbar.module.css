@@ -33,8 +33,8 @@
     border-radius: 8px;
     font-size: 14px;
     font-weight: 525;
-    background: transparent;
-    border: solid #ffffffbe;
+    background: black;
+    /* border: solid #ffffffbe; */
     color: #ffffffbe;
     text-shadow: none;
     box-shadow: transparent;
@@ -43,6 +43,7 @@
 }
 
 .botonboton:hover {
+    cursor: pointer;
     transform: scale(1.1);
     color: #ffffff;
     background: #008cff;
