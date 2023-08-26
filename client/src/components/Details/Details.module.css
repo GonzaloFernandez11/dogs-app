@@ -1,7 +1,7 @@
 .detailsContainer {
     max-width: 1500px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     margin: auto;
     padding: 2px;
@@ -17,30 +17,41 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-cute-dog-tiled-background-blue-bones-picture-image_1349649.jpg');
+    /* background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-cute-dog-tiled-background-blue-bones-picture-image_1349649.jpg'); */
+    background: #fe8c00; 
+    background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+    background: linear-gradient(to right, #f83600, #fe8c00); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     z-index: -1;
-    filter: brightness(0.8);
+    /* filter: brightness(0.8); */
 }
 
 .card {
     display: flex;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 200px;
-    width: 1280px;
+    margin-top: 70px;
+    width: 1200px;
     max-width: 100%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out, color 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .card:hover {
-    background: #4ECDC4;  
+    /* background: #4ECDC4;  
     background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  
     background: linear-gradient(to right, #556270, #4ECDC4); 
     color: white;
-    transform: scale(1.05)
+    transform: scale(1.05) */
+    transform: scale(1.05);
+    color: white;
+    background-color: black;
+    box-shadow:  
+    0 0 5px #008cff,
+    0 0 10px #008cff,
+    0 0 10px #008cff,
+    0 0 50px #008cff;
 }
 
 .content {
