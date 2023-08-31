@@ -51,7 +51,7 @@ export default function Details() {
                     </div>
                 </div>
             ) : (
-                <p>Loading...</p>
+                <img src='https://i.pinimg.com/originals/19/58/38/19583866f2c33d855fd2be99b47cddfe.gif' alt='Loading...' className={styles.loader}/>
             )}
         </div>
     )

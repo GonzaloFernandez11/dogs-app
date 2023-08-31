@@ -98,3 +98,9 @@
     text-align: center;
     font-family: 'Roboto Condensed', cursive;
 }
+
+.loader {
+    width: 80%;
+    height: 80%;
+    z-index: 0;
+}
