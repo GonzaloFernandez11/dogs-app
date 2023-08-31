@@ -18,9 +18,9 @@
     right: 0;
     bottom: 0;
     /* background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-cute-dog-tiled-background-blue-bones-picture-image_1349649.jpg'); */
-    background: #fe8c00; 
-    background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
-    background: linear-gradient(to right, #f83600, #fe8c00); 
+    background: #C6FFDD;
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -18,10 +18,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-image: url('https://www.infobae.com/new-resizer/Cdc-EYdfZEgSoiCuzAY-BbfLUKc=/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/FP7GOU7QTJCQLM3OM7W2F5IZT4.jpg'); */
-    background: #fe8c00; 
-    background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
-    background: linear-gradient(to right, #f83600, #fe8c00);
+    background-image: url(https://images3.alphacoders.com/772/772244.jpg);
+    /* background: #C6FFDD;
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -19,7 +19,7 @@ export default function Card({ id, image, name, temperaments, weight }) {
                 <div className={styles.content}>
                     <div className={styles.tempsweight}>
                         <h4 className={styles.info}><b>Temperaments:</b> - {Array.isArray(temperaments) ? 
-                        temperaments.join(', ') : temperaments} -</h4> {/* Dependiendo como renderice, modifico o no la info */}
+                        temperaments.join(', ') : temperaments} -</h4> 
                         <h4 className={styles.info}><b>Weight:</b> {weight} KG</h4>
                     </div>
                 </div>

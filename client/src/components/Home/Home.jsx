@@ -4,6 +4,7 @@ import { getBreeds } from '../../Redux/actions.js';
 import Cards from '../Cards/Cards.jsx';
 import Filters from '../Filters/Filters.jsx';
 import Pagination from '../Pagination/Pagination.jsx';
+import Loader from '../Loader/Loader.jsx';
 import styles from './Home.module.css';
 
 
@@ -45,6 +46,7 @@ export default function Home() {
     // El renderizado :)
     return (
         <div className={styles.container}>
+            { allBreeds.length > 0 ? (
             <div className={styles.box}>
 
                 <div className={styles.filters}>
@@ -73,6 +75,9 @@ export default function Home() {
                 </div>
 
             </div>
+            ) : ( 
+            <Loader></Loader>
+            ) }
         </div>
     )
 
