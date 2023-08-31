@@ -1,5 +1,3 @@
-// Bueno, LandingPage es un componente más visual, así que solo va a tener una imagen de fondo representativa del proyecto oscurecida y quizás con algo de blur, un h1 con la leyenda 'Welcome to the DOGS-APP' (ya veré con que fuente, color y tamaño), y un botón (encerrado en otro div y en un <Link />) para redirigir a /home.  
-
 import { Link } from 'react-router-dom';
 import styles from './LandingPage.module.css'
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -21,7 +19,7 @@ export default function LandingPage() {
                             rel="noopener noreferrer"
                             className={styles.iconLink}
                         >
-                            <FaGithub className={styles.icon} />
+                            <FaGithub className={styles.iconG} />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/gonzalo-ezequiel-fernandez/"
@@ -29,7 +27,7 @@ export default function LandingPage() {
                             rel="noopener noreferrer"
                             className={styles.iconLink}
                         >
-                            <FaLinkedin className={styles.icon} />
+                            <FaLinkedin className={styles.iconL} />
                         </a>
                     </div>
         </div>

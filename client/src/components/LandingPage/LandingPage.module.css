@@ -13,8 +13,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-image: url(https://wallpapers.com/images/featured/dog-wj7msvc5kj9v6cyy.jpg); */
-  background-image: url(https://images.pexels.com/photos/37860/border-collie-jump-water-british-sheepdog-37860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-image: url(https://images.alphacoders.com/130/1307447.jpg);
+  /* background-image: url(https://images.pexels.com/photos/37860/border-collie-jump-water-british-sheepdog-37860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -71,7 +71,9 @@
   cursor: pointer;
   font-size: 3em;
   /* color: #0084ff; */
-  color: #DC281E;
+  /* color: #DC281E; */
+  color: #2948ff; 
+
   text-shadow:
   0 0 20px #FFFFFF,
   0 0 20px #FFFFFF,
@@ -80,6 +82,7 @@
 
 .iconContainer {
   display: flex;
+  position: relative;
   margin-bottom: 200px;
   align-items: center;
   justify-content: center;
@@ -88,11 +91,36 @@
 .iconLink {
   text-decoration: none;
   color: #333; /* Cambia el color según tus preferencias */
-  margin: 0 10px;
+  margin: 0 35px;
+  padding-right: 65px;
   font-size: 24px;
+  align-items: center;
 }
 
-.icon {
-  color: black;
+.iconG {
+  position: fixed;
+  color: rgb(218, 206, 206);
   font-size: 3.5rem;
+  transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.iconL {
+  position: fixed;
+  color: rgb(218, 206, 206);
+  font-size: 3.5rem;
+  transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.iconG:hover {
+  background-color: black;
+  cursor: pointer;
+  font-size: 4rem;
+  color: white;
+}
+
+.iconL:hover {
+  background-color: rgb(7, 7, 155);
+  cursor: pointer;
+  font-size: 4rem;
+  color: white;
 }

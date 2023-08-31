@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { getByID, clearBreedDetail } from '../../Redux/actions';
+import Loader from '../Loader/Loader';
 import styles from './Details.module.css';
 
 
@@ -51,7 +52,7 @@ export default function Details() {
                     </div>
                 </div>
             ) : (
-                <img src='https://i.pinimg.com/originals/19/58/38/19583866f2c33d855fd2be99b47cddfe.gif' alt='Loading...' className={styles.loader}/>
+                <Loader></Loader>
             )}
         </div>
     )
