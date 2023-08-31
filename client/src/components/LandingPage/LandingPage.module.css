@@ -18,7 +18,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  filter: brightness(0.7);
+  /* filter: brightness(); */
   z-index: -1;
 }
 
