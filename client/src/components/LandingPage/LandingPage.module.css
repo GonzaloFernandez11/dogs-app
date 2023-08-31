@@ -18,21 +18,24 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* filter: brightness(); */
   z-index: -1;
 }
 
 
 .welcomeContainer {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70%;
   z-index: 1;
   position: relative;
 }
 
 .LandingInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -44,11 +47,23 @@
 }
 
  .welcome {
+  /* font-size: 2rem; */
+  text-align: center;
   margin: 0;
+  margin-bottom: 10px;
   font-family: 'Roboto Condensed', cursive;
   transition: font-size 0.3s, color 0.3s, text-shadow 0.3s;
   color: aliceblue;
-  
+}
+
+.welcome::before {
+  content: ''; /* Contenido vacío */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Coloca el seudo-elemento detrás del título */
 }
 
  .welcome:hover {
@@ -61,4 +76,23 @@
   0 0 20px #FFFFFF,
   0 0 20px #FFFFFF,
   0 0 20px #FFFFFF;
+}
+
+.iconContainer {
+  display: flex;
+  margin-bottom: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLink {
+  text-decoration: none;
+  color: #333; /* Cambia el color según tus preferencias */
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+.icon {
+  color: black;
+  font-size: 3.5rem;
 }

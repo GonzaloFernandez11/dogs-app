@@ -2,6 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import styles from './LandingPage.module.css'
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function LandingPage() {
     return (
@@ -13,6 +14,24 @@ export default function LandingPage() {
                 </Link>
                 </div>
             </div>
+            <div className={styles.iconContainer}>
+                        <a
+                            href="https://github.com/GonzaloFernandez11"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.iconLink}
+                        >
+                            <FaGithub className={styles.icon} />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/gonzalo-ezequiel-fernandez/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.iconLink}
+                        >
+                            <FaLinkedin className={styles.icon} />
+                        </a>
+                    </div>
         </div>
     )
 }
