@@ -39,11 +39,6 @@
 }
 
 .card:hover {
-    /* background: #4ECDC4;  
-    background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  
-    background: linear-gradient(to right, #556270, #4ECDC4); 
-    color: white;
-    transform: scale(1.05) */
     transform: scale(1.05);
     color: white;
     background-color: black;
