@@ -16,12 +16,15 @@ export default function Searchbar() {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(searchByName(name));
+        setName('')
+        
     };
 
     const handleKeyPress = (e) => {
         if( e.key === 'Enter' ) {
             handleSubmit(e);
         }
+        // setName('');
     };
 
     return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getBreeds } from '../../Redux/actions.js';
+import { getBreeds, sortsAndFilters, resetFilters } from '../../Redux/actions.js';
 import Cards from '../Cards/Cards.jsx';
 import Filters from '../Filters/Filters.jsx';
 import Pagination from '../Pagination/Pagination.jsx';
@@ -12,6 +12,7 @@ export default function Home() {
 
     const dispatch = useDispatch();
     const allBreeds = useSelector(state => state.breeds ); // Pasarle el length a Pagination
+    const [temperamentFilter, setTempFilter] = useState('Default');
 
     // console.log(breeds.precio)
 
@@ -43,6 +44,19 @@ export default function Home() {
         setCurrentPage(pageNum);
     };
 
+    const handleClick = (e) => {
+        e.preventDefault();
+
+        if( e.target.name === 'tempFilter' ) {  // Cada vez que haya un cambio se resetea el filter sorts_filters
+            setTempFilter(e.target.value);
+            dispatch(resetFilters()) // llamo para resetear el filtrado :)
+        }
+    }
+
+    useEffect(() => {  // Cuando se monta el componente o cuando se actualizan estos estados.
+        dispatch(sortsAndFilters(temperamentFilter));
+    }, [dispatch, temperamentFilter]);
+
     // El renderizado :)
     return (
         <div className={styles.container}>
@@ -51,6 +65,10 @@ export default function Home() {
 
                 <div className={styles.filters}>
                     <Filters />
+                </div>
+
+                <div className={styles.reload}>
+                    <button name='tempFilter' onClick={(e) => handleClick(e)}>Reload</button>
                 </div>
 
 <hr></hr> {/* Dejo este hr para ver bien como aplicar la separación y los estilos */}
