@@ -1,5 +1,8 @@
 .filtersContainer {
-    background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: transparent;
+    /* background: linear-gradient(to right, #12c2e9, #f64f59, #c471ed); 
+    background: -webkit-linear-gradient(to right, #12c2e9, #f64f59, #c471ed);  */
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,11 +24,20 @@
     padding: 0.5rem 1.5rem;
     appearance: none;
     border-radius: 0.5rem;
-    background-color: white;
+    background: transparent;
+    transition: 0.3s ease-in-out;
 }
 
 .selectBox select:hover {
     transform: scale(1.05);
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: black;
+    box-shadow: 
+    0 0 5px #008cff,
+    0 0 20px #008cff,
+    0 0 20px #008cff,
+    0 0 100px #008cff;
 }
 
 @media (min-width: 768px) {

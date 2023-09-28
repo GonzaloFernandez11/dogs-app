@@ -18,7 +18,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(https://images3.alphacoders.com/772/772244.jpg);
+    /* background-image: url(https://images.unsplash.com/photo-1584005982132-c114b40608f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80); */
+    background-image: url(https://images.unsplash.com/photo-1521120584799-f5bceb8a4bed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1591&q=80);
     /* background: #C6FFDD;
     background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
     background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); */
@@ -147,25 +148,32 @@ input[type='number']::-webkit-outer-spin-button {
     background: transparent;
     padding: 0.1rem 0.6rem;
     border-radius: 0.5rem;
-}
-
-
-.listButtonTemp:hover {
     color: red;
 }
+
+
+/* .listButtonTemp:hover {
+    color: red;
+} */
 
 
 .sendButton {
     background-color: white;
     color: black;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
     border-radius: 0.5rem;
+    transition: 0.3s ease-in;
 }
 
 .sendButton:hover {
-    background-color: black;
+    background-color: rgba(14, 240, 14, 0.849);
     cursor: pointer;
     color: white;
+    transform: scale(1.05);
+    box-shadow:
+    0 0 20px rgba(14, 233, 14, 0.849),
+    0 0 20px rgba(14, 233, 14, 0.849),
+    0 0 20px rgba(14, 233, 14, 0.849), 
+    0 0 20px rgba(14, 233, 14, 0.849);
 }
 
 .sendButton:disabled,

@@ -245,7 +245,7 @@ export default function Form() {
                 <input 
                 className={styles.sendButton}
                 disabled={ // osea, deshabilitado si...
-                    Object.entries(errors).length !== 0 ||  
+                    Object.entries(errors).length === 0 ||  
                     form.name === '.' ||
                     form.min_height === '.' ||  
                     form.max_height === '.' ||

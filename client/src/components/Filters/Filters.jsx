@@ -45,7 +45,7 @@ export default function Filters() {
         <div className={styles.filtersContainer}>
             <div className={styles.selectBox}>
                 {/* Filtrar por temperamentos:  */}
-                <h3>Filter by Temperaments:</h3>
+                {/* <h3>Filter by Temperaments:</h3> */}
                 <select
                 name='tempFilter'
                 defaultValue={'Default'}
@@ -67,7 +67,6 @@ export default function Filters() {
 
             <div className={styles.selectBox}>
                 {/* Filtrar por origen: */}
-                <h3>Filter by Origin:</h3>
                 <select
                 name='originFilter'
                 defaultValue={'Default'}
@@ -84,7 +83,7 @@ export default function Filters() {
 
             <div className={styles.selectBox}>
                 {/* Ordenar por alfabeto: */}
-                <h3>Alphabetical Order:</h3>
+                {/* <h3>Alphabetical Order:</h3> */}
                 <select
                 name='alphOrder'
                 defaultValue={'Default'}
@@ -101,7 +100,7 @@ export default function Filters() {
 
             <div className={styles.selectBox}>
                 {/* Ordenar por peso: */}
-                <h3>Order By Weight:</h3>
+                {/* <h3>Order By Weight:</h3> */}
                 <select
                 name='weightOrder'
                 defaultValue={'Default'}
