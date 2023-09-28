@@ -18,6 +18,12 @@ export default function Searchbar() {
         dispatch(searchByName(name));
     };
 
+    const handleKeyPress = (e) => {
+        if( e.key === 'Enter' ) {
+            handleSubmit(e);
+        }
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.searchbar}>
@@ -27,6 +33,7 @@ export default function Searchbar() {
                 type='search'
                 value={name}
                 onChange={(e) => handleInputChange(e)}
+                onKeyDown={(e) => handleKeyPress(e)}
                 />
 
                 <div className={styles.boton}>
