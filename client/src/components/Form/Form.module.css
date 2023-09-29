@@ -31,7 +31,7 @@
 }
 
 
-.form {
+/* .form {
     margin-top: 120px;
     margin-bottom: 20px;
     border: 0px solid black;
@@ -41,20 +41,45 @@
     padding: 1.5rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
     border-radius: 8px;
+    backdrop-filter: blur(5px);
+    background-clip: padding-box;
     transition: transform 0.3s ease-out, background-color 0.3s ease-out, color 0.3s ease-out, box-shadow 0.3s ease-out;
 
 }
 
 
 .form:hover {
-    transform: scale(1.02);
-    color: white;
-    background-color: black;
+    transform: scale(1.01);
+    color: black;
     box-shadow:  
     0 0 5px #008cff,
     0 0 10px #008cff,
     0 0 10px #008cff,
     0 0 50px #008cff;
+} */
+
+
+.form {
+    margin-top: 120px;
+    margin-bottom: 20px;
+    border: 0px solid black;
+    width: min(30rem, 100%);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Eliminamos background-color y color */
+    background-color: rgba(255, 255, 255, 0.247); /* Establecemos el fondo directamente aquí */
+    color: black; /* Establecemos el color de texto directamente aquí */
+}
+
+.form:hover {
+    transform: scale(1.02);
+    box-shadow:  
+    0 0 5px #288cff,
+    0 0 10px #288cff,
+    0 0 10px #288cff,
+    0 0 50px #288cff;
 }
 
 
